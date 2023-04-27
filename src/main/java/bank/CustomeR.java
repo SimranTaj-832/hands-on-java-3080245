@@ -6,13 +6,15 @@ public class CustomeR {
   private String username;
   private String password;
   private int accountId;
+  private boolean authenticated;
 
-  public CustomeR(int id, String name, String username, String password, int accountId){
+  public CustomeR(int id, String name, String username, String password, int accountId) {
     setId(id);
     setName(name);
     setUsername(username);
     setPassword(password);
-    setAccountid(accountId);
+    setAccountId(accountId);
+    setAuthenticated(false);
   }
 
   public int getId() {
@@ -47,15 +49,24 @@ public class CustomeR {
     this.password = password;
   }
 
-  public int getAccountid() {
-    return this.accountid;
+  public int getAccountId() {
+    return this.accountId;
   }
 
-  public void setAccountid(int accountid) {
-    this.accountid = accountid;
+  public void setAccountId(int accountId) {
+    this.accountId = accountId;
   }
 
+  public boolean isAuthenticated() {
+    return this.authenticated;
+  }
 
+  public boolean getAuthenticated() {
+    return this.authenticated;
+  }
 
+  public void setAuthenticated(boolean authenticated) {
+    this.authenticated = authenticated;
+  }
 
 }
